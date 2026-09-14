@@ -1,0 +1,8 @@
+-- Find the total score and the total number of customers for each country
+
+SELECT
+	 country,
+	 SUM(score) AS total_score,
+	 COUNT(id) AS total_customers
+FROM MyDatabase.dbo.customers
+GROUP BY country
